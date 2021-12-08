@@ -230,10 +230,12 @@ $baseUrl = $asset->baseUrl;
   </script>
 
 <?php
- $this->registerJs('$("body").scrollspy({
- target: "#mainNav",
- offset: 48
-});', $this::POS_END)
+$this->registerJs(
+  '$("body").scrollspy({
+    target: "#mainNav",
+    offset: 48
+  });', 
+   $this::POS_END)
 ?>
   <?php $this->endBody() ?>
 </body>

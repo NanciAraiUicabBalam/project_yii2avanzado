@@ -12,8 +12,10 @@ class AppAsset extends AssetBundle
     //public $basePath = '@webroot';
     //public $baseUrl = '@web';
     public $sourcePath = '@backend/themes/argon';
+    
 
     public $css = [
+        'css/site.css',
        'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700',
        'https://use.fontawesome.com/releases/v5.0.6/css/all.css',
        './assets/css/nucleo-icons.css',
