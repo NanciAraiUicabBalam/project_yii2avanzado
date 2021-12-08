@@ -99,8 +99,7 @@ class TaskSearch extends Task
             'updated_by' => $this->updated_by,
         ]);
 
-        $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'description', $this->description]);
+        $query->andFilterWhere(['like', 'name', $this->name])->andFilterWhere(['like', 'description', $this->description]);
         
             $query->joinWith(['owner' => function ($q) {
 
