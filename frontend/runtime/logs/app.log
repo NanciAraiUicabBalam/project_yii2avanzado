@@ -1,0 +1,80 @@
+2021-10-13 22:52:06 [127.0.0.1][1][2pt1jfaj4hr699l7tmk0d032nr][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\filters\AccessControl.php:158
+Stack trace:
+#0 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\filters\AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\base\Component.php(628): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\base\Controller.php(300): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\web\Controller.php(216): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\base\Controller.php(179): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('signup', Array)
+#8 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/signup', Array)
+#9 C:\wamp64\www\yii2Avanzado\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\wamp64\www\yii2Avanzado\frontend\web\index.php(18): yii\base\Application->run()
+#11 {main}
+2021-10-13 22:52:06 [127.0.0.1][1][2pt1jfaj4hr699l7tmk0d032nr][info][application] $_GET = [
+    'r' => 'site/signup'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => 'latna3lm7s5dvdf4psaepjf2dc'
+    'advanced-frontend' => '2pt1jfaj4hr699l7tmk0d032nr'
+    '_csrf-frontend' => '83d5eb087f02025eebdfc3bc06f8372193118a9d8d2d4d9f66907ac0c674c447a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"rSpopcEl3mRcdjHYgrc5QczPfzjjxXmy\";}'
+    '_csrf-backend' => '93a328c2d1b1c98b5991767bd3872f32591c92b0dd191824d4b99dfb6f502777a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"8pK1mKS1Apjn_l6G62DJr5rpdqR157Yg\";}'
+    'PHPSESSID' => '1p8ode66fn260oolnmekhimqmh'
+    '_identity-frontend' => '76afaa8768fdaf9ccafb6fd721bb5ced46e4fb83e5e9529452a603a2cb07d304a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"HMJjekS7QpPoBRZCXFAOHe7r495KS1xm\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+    '__authKey' => 'HMJjekS7QpPoBRZCXFAOHe7r495KS1xm'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-MX,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yii2avanzado/frontend/web/index.php?r=site%2Flogin'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => 'advanced-backend=latna3lm7s5dvdf4psaepjf2dc; advanced-frontend=2pt1jfaj4hr699l7tmk0d032nr; _csrf-frontend=83d5eb087f02025eebdfc3bc06f8372193118a9d8d2d4d9f66907ac0c674c447a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22rSpopcEl3mRcdjHYgrc5QczPfzjjxXmy%22%3B%7D; _csrf-backend=93a328c2d1b1c98b5991767bd3872f32591c92b0dd191824d4b99dfb6f502777a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%228pK1mKS1Apjn_l6G62DJr5rpdqR157Yg%22%3B%7D; PHPSESSID=1p8ode66fn260oolnmekhimqmh; _identity-frontend=76afaa8768fdaf9ccafb6fd721bb5ced46e4fb83e5e9529452a603a2cb07d304a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22HMJjekS7QpPoBRZCXFAOHe7r495KS1xm%22%2C2592000%5D%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Apache-svn\\bin;C:\\Program Files\\Rockwell Software\\RSCommon;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn\\;C:\\Program Files\\Azure Data Studio\\bin;C:\\wamp64\\bin\\php\\php5.6.40;C:\\ProgramData\\ComposerSetup\\bin;C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) PHP/7.3.21 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) PHP/7.3.21'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/yii2Avanzado/frontend/web/index.php'
+    'REMOTE_PORT' => '52025'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fsignup'
+    'REQUEST_URI' => '/yii2avanzado/frontend/web/index.php?r=site%2Fsignup'
+    'SCRIPT_NAME' => '/yii2avanzado/frontend/web/index.php'
+    'PHP_SELF' => '/yii2avanzado/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1634165526.0983
+    'REQUEST_TIME' => 1634165526
+]
