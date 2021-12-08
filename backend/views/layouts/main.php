@@ -2,8 +2,8 @@
 
 
 use yii\helpers\Html;
-
-
+use common\models\PermisosHelpers;
+use yii\helpers\Url;
 $asset = backend\assets\AppAsset::register($this);
 $baseUrl = $asset->baseUrl;
 
@@ -50,26 +50,12 @@ $baseUrl = $asset->baseUrl;
           </div>
         </div>
         <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
-              <i class="ni ni-ui-04 d-lg-none"></i>
-              <span class="nav-link-inner--text">Catalogo</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-xl">
-              <div class="dropdown-menu-inner">
-                <a href="" class="media d-flex align-items-center">
-                  <div class="icon icon-shape bg-gradient-primary rounded-circle text-white">
-                    <i class="ni ni-spaceship"></i>
-                  </div>
-                  <div class="media-body ml-3">
-                    <h6 class="heading text-primary mb-md-1">Proyectos</h6>
-                    <p class="description d-none d-md-inline-block mb-0">Mira los proyectos.</p>
-                  </div>
-                </a>
-                
-              </div>
-            </div>
-          </li>
+          
+        
+
+          
+         
+
           
         </ul>
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
@@ -92,21 +78,28 @@ $baseUrl = $asset->baseUrl;
             </a>
           </li>
          
-          <li class="nav-item">
-            <a class="btn btn-neutral" href="https://www.creative-tim.com/builder/argon" target="_blank">
-              <span class="nav-link-inner--text">Home</span>
-            </a>
-          </li>
+          
+          
+          <?php echo '<li class="nav-item">'
+                    . Html::beginForm(['/site/index'], 'post')
+                    . Html::submitButton(
+                        'Home',
+                        ['class' => 'btn btn-neutral logout']
+                    )
+                    . Html::endForm()
+                    . '</li>';?>
+
+          <?php echo '<li class="nav-item">'
+                    . Html::beginForm(['/project/index'], 'post')
+                    . Html::submitButton(
+                        'Proyectos',
+                        ['class' => 'btn btn-neutral logout']
+                    )
+                    . Html::endForm()
+                    . '</li>';?>
          
                       <?php
-                if (Yii::$app->user->isGuest) {
-                    echo '<li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/signup">Signup</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/login">Login</a>
-                        </li>';
-                } else {
+                
                    
                     echo '<li class="nav-item">'
                         . Html::beginForm(['/site/logout'], 'post')
@@ -116,8 +109,11 @@ $baseUrl = $asset->baseUrl;
                         )
                         . Html::endForm()
                         . '</li>';
-                }
+                
                 ?>
+                
+
+
         </ul>
       </div>
     </div>

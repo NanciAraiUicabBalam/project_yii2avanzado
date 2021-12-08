@@ -12,7 +12,7 @@ $baseUrl = $asset->baseUrl;
         <div class="row">
           <div class="col-md-8 mx-auto text-center">
             <span class="badge badge-primary badge-pill mb-3">Insight</span>
-            <h3 class="display-3">Full-Funnel Social Analytics</h3>
+            <h3 class="display-3">Crea tus proyectos </h3>
             <p class="lead">The time is now for it to be okay to be great. For being a bright color. For standing out.</p>
           </div>
         </div>
